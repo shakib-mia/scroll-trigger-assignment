@@ -1,38 +1,125 @@
+/* scrollbar section starts */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0D131B;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover  {
+  background: #555;
+}
+
+/* scrollbar section ends */
+
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 1000px;
+}
+
+svg {
+  height: 50vh;
+  border-radius: 50%;
+  position: absolute;
+  left: 28vw;
+  top: 15vh;
+  transition: all 500ms;
+}
+
+#left {
+  background-color: #16263B;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+  width: 40vw;
+  transition: all 500ms;
+}
+
+#svg-container {
+  position: relative;
+  width: 37vw;
+  height: 100vh;
+}
+
+#right {
+  width: 60vw;
+  background-color: #0D131B;
   color: white;
+  height: 700vh;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+#right div {
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dots-nav{
+  background-color: transparent;
+}
+
+#one, #two, #three, #four, #five, #six, #seven {
+  background-color: #0D131B;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#svg-container #svg-text div {
+  color: white;
+  position: absolute;
+  right: -10vw;
+  top: 31vh !important;
+  z-index: 10;
+  margin: 0;
+  text-align: right;
+  width: 50vw;
+  line-height: 100%;
+}
+
+#svg-container #svg-text div h1 {
+  font-size: 4rem;
+}
+
+#svg-container #svg-text div h6{
+  font-size: 1.5rem;
+}
+
+*{
+  scroll-behavior: smooth;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#download {
+  top: 40vh !important;
+}
+
+#ux-strategy{
+  line-height: 0rem !important;
+}
+
+#blockchain {
+  line-height: 0rem !important;
+}
+
+#blockchain h6:first-child {
+  left: -164px;
+  position: relative !important;
 }

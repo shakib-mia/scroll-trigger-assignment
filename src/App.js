@@ -82,7 +82,7 @@ function App() {
               : "#00834C",
         }}
       >
-        <div id="heading">Hello</div>
+        <div id="heading"></div>
         <div id="svg-container">
           <div id="svg-text">
             {textChange >= 0 && textChange < 16 ? (
@@ -148,9 +148,11 @@ function App() {
               : "",
           backgroundImage:
             textChange >= 83 && textChange < 100 ? `url(${BgImg})` : "",
-          backgroundSize: "100%",
-          backgroundRepeat: "noRepeat",
-          backgroundPosition: "center",
+          backgroundSize: textChange >= 83 && textChange < 100 ? "cover" : "",
+          backgroundRepeat:
+            textChange >= 83 && textChange < 100 ? "noRepeat" : "",
+          backgroundAttachment:
+            textChange >= 83 && textChange < 100 ? "fixed" : "",
         }}
       >
         {textChange >= 0 && textChange < 16 ? (

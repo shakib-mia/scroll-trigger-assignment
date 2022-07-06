@@ -45,7 +45,7 @@ const Page4 = () => {
       },
       {
         y: "55vh",
-        scrollTrigger: {},
+        duration: 1,
       }
     );
     gsap.fromTo(
@@ -57,7 +57,7 @@ const Page4 = () => {
       {
         x: "15vw",
         y: "70vh",
-        scrollTrigger: {},
+        duration: 1,
       }
     );
     gsap.fromTo(
@@ -69,7 +69,7 @@ const Page4 = () => {
       {
         y: "10vh",
         x: "8vw",
-        scrollTrigger: {},
+        duration: 1,
       }
     );
   }, []);

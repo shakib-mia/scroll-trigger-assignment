@@ -4,7 +4,9 @@ import React, { useRef, useState } from "react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Page1 from "./components/Pages/Page1";
+import Page4 from "./components/Pages/Page4";
+import Page3 from "./components/Pages/Page3";
+import Page2 from "./components/Pages/Page2";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,14 +15,11 @@ function App() {
   const [textChange, setTextChange] = useState(0);
 
   const left = useRef(null);
-  const two = useRef(null);
-  const three = useRef(null);
-  const four = useRef(null);
-  const five = useRef(null);
-  const six = useRef(null);
-  const seven = useRef(null);
-  const svgText = useRef(null);
+
   const animate = useRef(null);
+
+  const containers = gsap.utils.toArray("#right");
+  const svgText = gsap.utils.toArray("#svg-text");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -55,7 +54,7 @@ function App() {
         }}
       >
         <div id="svg-container">
-          <div id="svg-text" ref={svgText}>
+          <div id="svg-text">
             {textChange >= 0 && textChange < 16 ? (
               <div id="download" ref={animate}>
                 <h1>25M+ Downloads</h1>
@@ -103,25 +102,42 @@ function App() {
         </div>
       </div>
       <div id="right">
-        <Page1></Page1>
-        <div ref={two} id="two">
-          two
-        </div>
-        <div ref={three} id="three">
-          three
-        </div>
-        <div ref={four} id="four">
-          four
-        </div>
-        <div ref={five} id="five">
-          five
-        </div>
-        <div ref={six} id="six">
-          six
-        </div>
-        <div ref={seven} id="seven">
-          seven
-        </div>
+        {textChange >= 0 && textChange < 16 ? (
+          <div id="one" className="page">
+            <h1>25M+ Downloads</h1>
+            <h6>on appstore & google playstore</h6>
+          </div>
+        ) : textChange >= 16 && textChange < 33 ? (
+          <div id="two" className="page">
+            <Page2></Page2>
+          </div>
+        ) : textChange >= 33 && textChange < 50 ? (
+          <div id="three" className="page">
+            <Page3></Page3>
+          </div>
+        ) : textChange >= 50 && textChange < 65 ? (
+          <div id="four" className="page">
+            <Page4></Page4>
+          </div>
+        ) : textChange >= 65 && textChange < 83 ? (
+          <div id="five" className="page">
+            <h6>Redefining</h6>
+            <h1>UX Strategy</h1>
+            <h6>and UI Design</h6>
+          </div>
+        ) : textChange >= 50 && textChange < 99 ? (
+          <div id="six" className="page">
+            <h6>Redefining</h6>
+            <h1>UX Strategy</h1>
+            <h6>and UI Design</h6>
+          </div>
+        ) : (
+          <div id="seven" className="page">
+            <h6>Redefining</h6>
+            <h1>UX Strategy</h1>
+            <h6>and UI Design</h6>
+          </div>
+        )}
       </div>
     </div>
   );

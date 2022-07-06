@@ -125,3 +125,7 @@ svg {
   left: -189px;
   position: relative !important;
 }
+
+img {
+  position: absolute;
+}

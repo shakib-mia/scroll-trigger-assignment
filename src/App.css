@@ -7,7 +7,8 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0D131B;
+  /* background: #0D131B; */
+  background: transparent;
 }
 
 /* Handle */
@@ -23,6 +24,10 @@
 
 /* scrollbar section ends */
 
+body {
+  background-color: #0D131B;
+  overflow-x: hidden;
+}
 
 .App {
   display: flex;
@@ -139,4 +144,18 @@ img {
   background: url("images/interior.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#page7 img {
+  width: 18vw
+}
+
+#page7 {
+  display: flex;
+  align-items: flex-end;
+}
+
+#page7 img:first-child {
+  z-index: 1;
+  left: -13vw
 }

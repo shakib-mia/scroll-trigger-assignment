@@ -10,12 +10,39 @@ import Page2 from "./components/Pages/Page2";
 import Page1 from "./components/Pages/Page1";
 import Page5 from "./components/Pages/Page5";
 import Page6 from "./components/Pages/Page6";
+import Page7 from "./components/Pages/Page7";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [scrollResult, setScrollResult] = useState(0);
   const [textChange, setTextChange] = useState(0);
+
+  const downloadHead = useRef(null);
+  const downloadFoot = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      downloadHead.current,
+      {
+        y: "-100vh",
+      },
+      {
+        y: 0,
+      }
+    );
+    gsap.fromTo(
+      downloadFoot.current,
+      {
+        y: "-100vh",
+        display: "none",
+      },
+      {
+        y: 0,
+        display: "block",
+      }
+    );
+  }, []);
 
   const left = useRef(null);
 
@@ -56,9 +83,9 @@ function App() {
         <div id="svg-container">
           <div id="svg-text">
             {textChange >= 0 && textChange < 16 ? (
-              <div id="download" ref={animate}>
-                <h1>25M+ Downloads</h1>
-                <h6>on appstore & google playstore</h6>
+              <div id="download">
+                <h1 ref={downloadHead}>25M+ Downloads</h1>
+                <h6 ref={downloadFoot}>on appstore & google playstore</h6>
               </div>
             ) : textChange >= 16 && textChange < 33 ? (
               <div id="blockchain" ref={animate}>
@@ -128,9 +155,7 @@ function App() {
           </div>
         ) : (
           <div id="seven" className="page">
-            <h6>Redefining</h6>
-            <h1>UX Strategy</h1>
-            <h6>and UI Design</h6>
+            <Page7></Page7>
           </div>
         )}
       </div>

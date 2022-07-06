@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Page4 from "./components/Pages/Page4";
 import Page3 from "./components/Pages/Page3";
 import Page2 from "./components/Pages/Page2";
+import Page1 from "./components/Pages/Page1";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,9 +18,6 @@ function App() {
   const left = useRef(null);
 
   const animate = useRef(null);
-
-  const containers = gsap.utils.toArray("#right");
-  const svgText = gsap.utils.toArray("#svg-text");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -104,8 +102,7 @@ function App() {
       <div id="right">
         {textChange >= 0 && textChange < 16 ? (
           <div id="one" className="page">
-            <h1>25M+ Downloads</h1>
-            <h6>on appstore & google playstore</h6>
+            <Page1></Page1>
           </div>
         ) : textChange >= 16 && textChange < 33 ? (
           <div id="two" className="page">

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BgImg from "./images/interior.jpg";
+import nasa from "./images/nasa-mobile-app.png";
 import Page4 from "./components/Pages/Page4";
 import Page3 from "./components/Pages/Page3";
 import Page2 from "./components/Pages/Page2";
@@ -67,7 +68,7 @@ function App() {
             textChange >= 0 && textChange < 16
               ? "#6311A8"
               : textChange >= 16 && textChange < 33
-              ? "#3B21A0"
+              ? "#4D27CD"
               : textChange >= 33 && textChange < 50
               ? "#0E123A"
               : textChange >= 33 && textChange < 50
@@ -81,6 +82,7 @@ function App() {
               : "#00834C",
         }}
       >
+        <div id="heading">Hello</div>
         <div id="svg-container">
           <div id="svg-text">
             {textChange >= 0 && textChange < 16 ? (
@@ -95,10 +97,10 @@ function App() {
                 <h6>Revolution</h6>
               </div>
             ) : textChange >= 33 && textChange < 50 ? (
-              <div id="ux-strategy" ref={animate}>
-                <h6>Redefining</h6>
-                <h1>UX Strategy</h1>
-                <h6>and UI Design</h6>
+              <div id="nasa" ref={animate}>
+                <h6>Powered by advancne</h6>
+                <img src={nasa} alt="" width="217" />
+                <h6>algorithms</h6>
               </div>
             ) : textChange >= 50 && textChange < 65 ? (
               <div id="ux-strategy" ref={animate}>
@@ -107,16 +109,16 @@ function App() {
                 <h6>and UI Design</h6>
               </div>
             ) : textChange >= 65 && textChange < 83 ? (
-              <div id="ux-strategy" ref={animate}>
-                <h6>Redefining</h6>
-                <h1>UX Strategy</h1>
-                <h6>and UI Design</h6>
+              <div id="text-headline" ref={animate}>
+                <h6>Text Headline</h6>
+                <h1>Text Headline</h1>
+                <h6>Footer Headline</h6>
               </div>
             ) : textChange >= 50 && textChange < 99 ? (
-              <div id="ux-strategy" ref={animate}>
-                <h6>Redefining</h6>
-                <h1>UX Strategy</h1>
-                <h6>and UI Design</h6>
+              <div id="erp" ref={animate}>
+                <h6>Developing ERP Solution for</h6>
+                <h1>Text Headline</h1>
+                <h6>in furniture industry</h6>
               </div>
             ) : (
               <div id="ux-strategy" ref={animate}>

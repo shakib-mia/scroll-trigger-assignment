@@ -18,7 +18,7 @@ const Svg = ({ scrollResult, textChange }) => {
           textChange >= 0 && textChange < 16
             ? "#6311A8"
             : textChange >= 16 && textChange < 33
-            ? "#3B21A0"
+            ? "#4D27CD"
             : textChange >= 33 && textChange < 50
             ? "#0E123A"
             : textChange >= 33 && textChange < 50

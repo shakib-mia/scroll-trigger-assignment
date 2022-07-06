@@ -87,11 +87,37 @@ svg {
   justify-content: center;
 }
 
+#ux-strategy, #erp{
+  line-height: 0rem !important;
+  position: absolute !important;
+  left: -10rem;
+  top: 13rem !important;
+}
+
+#ux-strategy h6:first-child {
+  margin-right: 196px;
+}
+
+#erp h6:first-child {
+  margin-right: 80px;
+}
+
+
+
+#text-headline {
+  top: 24vh !important;
+  left: -5vw;
+}
+
+#text-headline h6:first-child {
+  margin-right: 14rem;
+}
+
 #svg-container #svg-text div {
   color: white;
   position: absolute;
   right: -10vw;
-  top: 31vh !important;
+  top: 31vh;
   z-index: 10;
   margin: 0;
   text-align: right;
@@ -105,6 +131,10 @@ svg {
 
 #svg-container #svg-text div h6{
   font-size: 1.5rem;
+  font-weight: lighter;
+}
+#svg-container #svg-text div h6:first-child{
+  left: 0;
 }
 
 *{
@@ -113,12 +143,10 @@ svg {
 }
 
 #download {
-  top: 40vh !important;
+  top: 32vh !important;
+  right: -5vw !important;
 }
 
-#ux-strategy{
-  line-height: 0rem !important;
-}
 
 #blockchain {
   line-height: 0rem !important;
@@ -127,11 +155,22 @@ svg {
 }
 
 #blockchain h6:first-child {
-  left: -189px;
   position: relative !important;
+  left: -180px;
 }
 
-img {
+#nasa{
+  left: -8vw;
+}
+
+#nasa h6{
+  line-height: 3rem;
+  padding: 0 !important;
+  margin: 0 !important;
+  right: 0;
+}
+
+#right img {
   position: absolute;
 }
 
@@ -158,4 +197,10 @@ img {
 #page7 img:first-child {
   z-index: 1;
   left: -13vw
+}
+
+#heading {
+  position: absolute;
+  bottom: 0;
+  padding: 2.5rem 5rem;
 }

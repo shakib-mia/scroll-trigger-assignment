@@ -117,9 +117,11 @@ svg {
 
 #blockchain {
   line-height: 0rem !important;
+  margin-right: 8rem !important;
+  margin-top: -3rem !important;
 }
 
 #blockchain h6:first-child {
-  left: -164px;
+  left: -189px;
   position: relative !important;
 }

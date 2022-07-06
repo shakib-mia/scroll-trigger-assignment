@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BgImg from "./images/interior.jpg";
 import Page4 from "./components/Pages/Page4";
 import Page3 from "./components/Pages/Page3";
 import Page2 from "./components/Pages/Page2";
@@ -128,7 +129,28 @@ function App() {
           <Svg scrollResult={scrollResult} textChange={textChange}></Svg>
         </div>
       </div>
-      <div id="right">
+      <div
+        id="right"
+        style={{
+          background:
+            textChange >= 0 && textChange < 16
+              ? "#CCCCCE"
+              : textChange >= 16 && textChange < 33
+              ? "#1C0362"
+              : textChange >= 33 && textChange < 50
+              ? "#141748"
+              : textChange >= 65 && textChange < 83
+              ? "#22CFEA"
+              : textChange >= 100
+              ? "#00B769"
+              : "",
+          backgroundImage:
+            textChange >= 83 && textChange < 100 ? `url(${BgImg})` : "",
+          backgroundSize: "100%",
+          backgroundRepeat: "noRepeat",
+          backgroundPosition: "center",
+        }}
+      >
         {textChange >= 0 && textChange < 16 ? (
           <div id="one" className="page">
             <Page1></Page1>
@@ -149,7 +171,7 @@ function App() {
           <div id="five" className="page">
             <Page5></Page5>
           </div>
-        ) : textChange >= 50 && textChange < 99 ? (
+        ) : textChange >= 83 && textChange < 100 ? (
           <div id="six" className="page">
             <Page6></Page6>
           </div>

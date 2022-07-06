@@ -30,6 +30,8 @@ const Svg = ({ scrollResult, textChange }) => {
             : textChange >= 82 && textChange < 100
             ? "#012C91"
             : "#00834C",
+
+        boxShadow: textChange >= 65 && textChange < 82 ? "0 0 30px #222" : "",
       }}
       xmlSpace="preserve"
     >

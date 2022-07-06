@@ -8,6 +8,8 @@ import Page4 from "./components/Pages/Page4";
 import Page3 from "./components/Pages/Page3";
 import Page2 from "./components/Pages/Page2";
 import Page1 from "./components/Pages/Page1";
+import Page5 from "./components/Pages/Page5";
+import Page6 from "./components/Pages/Page6";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -118,15 +120,11 @@ function App() {
           </div>
         ) : textChange >= 65 && textChange < 83 ? (
           <div id="five" className="page">
-            <h6>Redefining</h6>
-            <h1>UX Strategy</h1>
-            <h6>and UI Design</h6>
+            <Page5></Page5>
           </div>
         ) : textChange >= 50 && textChange < 99 ? (
           <div id="six" className="page">
-            <h6>Redefining</h6>
-            <h1>UX Strategy</h1>
-            <h6>and UI Design</h6>
+            <Page6></Page6>
           </div>
         ) : (
           <div id="seven" className="page">

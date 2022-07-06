@@ -129,3 +129,14 @@ svg {
 img {
   position: absolute;
 }
+
+#page5 img {
+  width: 16rem;
+}
+
+#page6 img {
+  width: 60vw;
+  background: url("images/interior.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

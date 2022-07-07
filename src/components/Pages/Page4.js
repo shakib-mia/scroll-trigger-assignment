@@ -56,7 +56,7 @@ const Page4 = () => {
       },
       {
         x: "15vw",
-        y: "70vh",
+        y: "80vh",
         duration: 1,
       }
     );

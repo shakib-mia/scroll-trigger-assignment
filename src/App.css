@@ -214,10 +214,11 @@ svg {
   left: -13vw
 }
 
-#heading {
+.heading {
   position: absolute;
   bottom: 0;
   padding: 2.5rem 5rem;
+  width: 65%;
 }
 
 #text {
@@ -227,4 +228,23 @@ svg {
 }
 #text h6:first-child {
   margin-right: 13.5vw;
+}
+
+
+.heading {
+  color: white;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  line-height: 1rem;
+}
+
+.heading img {
+  width: 18rem;
+  margin: 0 auto;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
 }

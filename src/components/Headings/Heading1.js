@@ -33,7 +33,12 @@ const Heading1 = () => {
 
   return (
     <div className="heading">
-      <img ref={image} src={HeadingImage} alt="" />
+      <img
+        ref={image}
+        src={HeadingImage}
+        alt=""
+        // style={{ backgroundColor: "#6311A8", paddingTop: "20px" }}
+      />
       <h1 ref={headerText}>ABC 123</h1>
       <p ref={para}>
         We are the best web development <br /> company in the world

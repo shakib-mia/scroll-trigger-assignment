@@ -1,0 +1,11 @@
+.heading {
+    top: 50vh !important;
+}
+
+.owl-carousel {
+    height: 100vh;
+}
+
+.item {
+    height: 100vh;
+}

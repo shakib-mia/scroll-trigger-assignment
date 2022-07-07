@@ -108,6 +108,10 @@ svg {
   top: 24vh !important;
   left: -5vw;
 }
+#text-headline h6 {
+
+  left: -5vw;
+}
 
 #text-headline h6:first-child {
   margin-right: 14rem;
@@ -156,7 +160,7 @@ svg {
 
 #blockchain h6:first-child {
   position: relative !important;
-  left: -180px;
+  left: -180px !important;
 }
 
 #nasa{
@@ -168,6 +172,16 @@ svg {
   padding: 0 !important;
   margin: 0 !important;
   right: 0;
+}
+
+#biggest-classifieds {
+  line-height: 0 !important;
+  margin-right: 6vw !important;
+  margin-top: -2vw !important;
+}
+
+#biggest-classifieds h6:first-child {
+  margin-right: 3vw !important;
 }
 
 #right img {
@@ -202,4 +216,13 @@ svg {
   position: absolute;
   bottom: 0;
   padding: 2.5rem 5rem;
+}
+
+#text {
+  right: -10vw !important;
+  top: 25vh !important;
+  line-height: 1vh !important;
+}
+#text h6:first-child {
+  margin-right: 13.5vw;
 }

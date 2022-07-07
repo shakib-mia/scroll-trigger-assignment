@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BgImg from "./images/interior.jpg";
-import nasa from "./images/nasa-mobile-app.png";
 import Page4 from "./components/Pages/Page4";
 import Page3 from "./components/Pages/Page3";
 import Page2 from "./components/Pages/Page2";
@@ -13,38 +12,19 @@ import Page1 from "./components/Pages/Page1";
 import Page5 from "./components/Pages/Page5";
 import Page6 from "./components/Pages/Page6";
 import Page7 from "./components/Pages/Page7";
+import Title1 from "./components/Titles/Title1";
+import Title2 from "./components/Titles/Title2";
+import Title3 from "./components/Titles/Title3";
+import Title4 from "./components/Titles/Title4";
+import Title6 from "./components/Titles/Title6";
+import Title5 from "./components/Titles/Title5";
+import Title7 from "./components/Titles/Title7";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const [scrollResult, setScrollResult] = useState(0);
   const [textChange, setTextChange] = useState(0);
-
-  const downloadHead = useRef(null);
-  const downloadFoot = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      downloadHead.current,
-      {
-        y: "-100vh",
-      },
-      {
-        y: 0,
-      }
-    );
-    gsap.fromTo(
-      downloadFoot.current,
-      {
-        y: "-100vh",
-        display: "none",
-      },
-      {
-        y: 0,
-        display: "block",
-      }
-    );
-  }, []);
 
   const left = useRef(null);
 
@@ -82,50 +62,23 @@ function App() {
               : "#00834C",
         }}
       >
-        <div id="heading"></div>
+        <div id="heading">"Heading"</div>
         <div id="svg-container">
           <div id="svg-text">
             {textChange >= 0 && textChange < 16 ? (
-              <div id="download">
-                <h1 ref={downloadHead}>25M+ Downloads</h1>
-                <h6 ref={downloadFoot}>on appstore & google playstore</h6>
-              </div>
+              <Title1></Title1>
             ) : textChange >= 16 && textChange < 33 ? (
-              <div id="blockchain" ref={animate}>
-                <h6>The Next Big</h6>
-                <h1>Blockchain</h1>
-                <h6>Revolution</h6>
-              </div>
+              <Title2></Title2>
             ) : textChange >= 33 && textChange < 50 ? (
-              <div id="nasa" ref={animate}>
-                <h6>Powered by advancne</h6>
-                <img src={nasa} alt="" width="217" />
-                <h6>algorithms</h6>
-              </div>
+              <Title3></Title3>
             ) : textChange >= 50 && textChange < 65 ? (
-              <div id="ux-strategy" ref={animate}>
-                <h6>Redefining</h6>
-                <h1>UX Strategy</h1>
-                <h6>and UI Design</h6>
-              </div>
+              <Title4></Title4>
             ) : textChange >= 65 && textChange < 83 ? (
-              <div id="text-headline" ref={animate}>
-                <h6>Text Headline</h6>
-                <h1>Text Headline</h1>
-                <h6>Footer Headline</h6>
-              </div>
+              <Title5></Title5>
             ) : textChange >= 50 && textChange < 99 ? (
-              <div id="erp" ref={animate}>
-                <h6>Developing ERP Solution for</h6>
-                <h1>Text Headline</h1>
-                <h6>in furniture industry</h6>
-              </div>
+              <Title6></Title6>
             ) : (
-              <div id="ux-strategy" ref={animate}>
-                <h6>Redefining</h6>
-                <h1>UX Strategy</h1>
-                <h6>and UI Design</h6>
-              </div>
+              <Title7></Title7>
             )}
           </div>
           <Svg scrollResult={scrollResult} textChange={textChange}></Svg>

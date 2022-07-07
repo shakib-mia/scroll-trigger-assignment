@@ -5,10 +5,13 @@
   width: 10px;
 }
 
+
+
 /* Track */
 ::-webkit-scrollbar-track {
   /* background: #0D131B; */
   background: transparent;
+  position: absolute;
 }
 
 /* Handle */
@@ -24,8 +27,7 @@
 
 /* scrollbar section ends */
 
-body {
-  background-color: #0D131B;
+body{
   overflow-x: hidden;
 }
 

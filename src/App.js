@@ -28,8 +28,6 @@ function App() {
 
   const left = useRef(null);
 
-  const animate = useRef(null);
-
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollResult((window.scrollY / 585) * 100);
@@ -39,7 +37,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        background: "blue",
+      }}
+    >
       <div
         ref={left}
         id="left"
@@ -94,6 +97,8 @@ function App() {
               ? "#1C0362"
               : textChange >= 33 && textChange < 50
               ? "#141748"
+              : textChange >= 50 && textChange < 65
+              ? "#0D131B"
               : textChange >= 65 && textChange < 83
               ? "#22CFEA"
               : textChange >= 100

@@ -28,13 +28,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="body" style="background-color:blue;">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
-
       You can add webfonts, meta tags, or analytics to this file.
       The build step will place the bundled scripts into the <body> tag.
 
@@ -43,6 +42,29 @@
     -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script>
+    window.addEventListener("scroll", () => {
+      const textChange = parseInt((window.scrollY / 4747) * 100);
+      document.getElementById("body").style.background = textChange >= 0 && textChange < 16 ?
+        "#CCCCCE" :
+        textChange >= 16 && textChange < 33 ?
+        "#1C0362" :
+        textChange >= 33 && textChange < 50 ?
+        "#141748" :
+
+        textChange >= 50 && textChange < 65 ?
+        "#0D131B" :
+
+        textChange >= 65 && textChange < 83 ?
+        "#22CFEA" :
+
+        textChange >= 83 && textChange < 100 ?
+        "#948F8B" :
+        textChange >= 100 ?
+        "#00B769" :
+        ""
+    })
+  </script>
 </body>
 
 </html>

@@ -70,7 +70,10 @@ const Svg = ({ scrollResult, textChange }) => {
         <g>
           <path
             class="dotsst dotsfill1"
-            style={{ fill: circleFill, opacity: 1 }}
+            style={{
+              fill: textChange >= 0 ? circleFill : circleFill,
+              opacity: 1,
+            }}
             d="M84,80 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 87, 80, 84,80 z"
           ></path>
         </g>
@@ -93,7 +96,7 @@ const Svg = ({ scrollResult, textChange }) => {
           <path
             class="dotsst dotsfill2"
             style={{
-              fill: scrollResult > 131 ? circleFill : "#bdc3c7",
+              fill: textChange >= 16 ? circleFill : "#bdc3c7",
               opacity: 1,
             }}
             d="M206.8,29c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6S 210.1,29, 206.8,29 z M206.8"
@@ -119,7 +122,7 @@ const Svg = ({ scrollResult, textChange }) => {
           <path
             class="dotsst dotsfill3"
             style={{
-              fill: scrollResult > 270 ? circleFill : "#bdc3c7",
+              fill: textChange >= 33 ? circleFill : "#bdc3c7",
               opacity: 1,
             }}
             d="M332,85 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 335,85, 332,85 z M332"
@@ -144,7 +147,7 @@ const Svg = ({ scrollResult, textChange }) => {
           <path
             class="dotsst dotsfill4"
             style={{
-              fill: scrollResult > 404 ? circleFill : "#bdc3c7",
+              fill: textChange >= 50 ? circleFill : "#bdc3c7",
               opacity: 1,
             }}
             d="M380,205 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 383,205, 380,205 z M380"
@@ -169,7 +172,7 @@ const Svg = ({ scrollResult, textChange }) => {
           <path
             class="dotsst dotsfill5"
             style={{
-              fill: scrollResult > 528 ? circleFill : "#bdc3c7",
+              fill: textChange >= 65 ? circleFill : "#bdc3c7",
               opacity: 1,
             }}
             d="M335,315 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 340,315, 335,315 z M335"
@@ -194,7 +197,7 @@ const Svg = ({ scrollResult, textChange }) => {
           <path
             class="dotsst dotsfill6"
             style={{
-              fill: scrollResult > 670 ? circleFill : "#bdc3c7",
+              fill: textChange >= 82 ? circleFill : "#bdc3c7",
               opacity: 1,
             }}
             d="M210,375 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 215,375, 210,375 z M210"
@@ -219,7 +222,7 @@ const Svg = ({ scrollResult, textChange }) => {
           <path
             class="dotsst dotsfill7"
             style={{
-              fill: scrollResult > 811 ? circleFill : "#bdc3c7",
+              fill: textChange >= 100 ? circleFill : "#bdc3c7",
               opacity: 1,
             }}
             d="M88,324 c-3.3,0-6,2.7-6,6s2.7,6,6,6s6-2.7,6 -6 S 92,324, 88,324 z M88"

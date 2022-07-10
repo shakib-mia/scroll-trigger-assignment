@@ -48,7 +48,7 @@ function App() {
     <div
       className="App"
       style={{
-        background: "blue",
+        background: "#6311A8",
       }}
     >
       <div id="large">

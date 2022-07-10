@@ -14,11 +14,12 @@ import Heading4 from "./../Headings/Heading4";
 import Heading5 from "./../Headings/Heading5";
 import Heading6 from "./../Headings/Heading6";
 import Heading7 from "./../Headings/Heading7";
+import ReactOwlCarousel from "react-owl-carousel";
 
 const Small = () => {
   return (
     <div>
-      <div className="owl-carousel">
+      <ReactOwlCarousel items={1} dots={true}>
         <div className="item" style={{ backgroundColor: "#6311A8" }}>
           <img src={Page1} alt="" />
           <Heading1></Heading1>
@@ -48,7 +49,7 @@ const Small = () => {
           <img src={Page7} alt="" />
           <Heading7></Heading7>
         </div>
-      </div>
+      </ReactOwlCarousel>
     </div>
   );
 };

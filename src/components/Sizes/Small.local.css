@@ -1,6 +1,30 @@
-.heading {
-    top: 50vh !important;
+.owl-item .heading {
+    top: 0vh !important;
+    padding:50px 50px !important;
 }
+
+.owl-item:first-child .heading {
+    position: relative;
+}
+.owl-item:first-child .heading img{
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.owl-item:last-child .heading {
+    position: relative;
+}
+.owl-item:last-child .heading img{
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60%;
+}
+
 
 .owl-carousel {
     height: 100vh;
@@ -8,4 +32,10 @@
 
 .item {
     height: 100vh;
+}
+
+
+.item:last-child h1{
+    line-height: 3rem;
+    font-size: 3rem;
 }

@@ -214,10 +214,9 @@ svg {
   left: -13vw
 }
 
-.heading {
+#heading {
   position: absolute;
   bottom: 0;
-  padding: 2.5rem 5rem;
   width: 65%;
 }
 
@@ -257,6 +256,10 @@ footer {
   #small {
     display: none;
   }
+
+  #heading {
+    padding: 50px;
+  }
 }
 @media (max-width: 1000px) {
   body {
@@ -270,8 +273,12 @@ footer {
     border-radius: 10px;
     padding: 5px;
   }
+
+
   #enterpreneur{
     background-color: #00834C;
+    padding: 2px !important;
   }
 
+  
 }
